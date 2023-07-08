@@ -1,0 +1,204 @@
+
+<head>
+<link rel="stylesheet" href="../static/css/bootstrap.css" />
+<link rel="stylesheet" href="../static/font/roboto-condensed-offline.css" />
+<link rel="stylesheet" href="../static/css/style.css" />
+
+<script src="../static/js/script.js"></script>
+
+
+
+<title>Snowrunner</title>
+</head>
+
+<body class="text-light bg-dark">
+<div class="container">
+
+<div>
+	<div class="tab btn btn-primary" onclick="openTab(event, 'tab1')">Michigan</div>
+	<div class="tab btn btn-primary" onclick="openTab(event, 'tab2')">Alaska</div>
+	<div class="tab btn btn-primary" onclick="openTab(event, 'tab3')">Taymyr</div>
+</div>
+
+<div>
+	<div id="tab1" class="tab-content">
+		<div class="tab btn btn-primary" onclick="openTab(event, 'black_river')">Black River</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'sv_dam')">Smithville Dam</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'island_lake')">Island Lake</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'drummond')">Drummond Island</div>
+	</div>
+	<div id="tab2" class="tab-content">
+		<div class="tab btn btn-primary" onclick="openTab(event, 'north_port')">North Port</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'mt_river')">Mountain River</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'white_valley')">White Valley</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'pedro_bay')">Pedro Bay</div>
+	</div>
+	<div id="tab3" class="tab-content">
+		<div class="tab btn btn-primary" onclick="openTab(event, 'drowned_lands')">Drowned Lands</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'quarry')">Quarry</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'blank')">[Blank]</div>
+		<div class="tab btn btn-primary" onclick="openTab(event, 'blank')">[Blank]</div>
+	</div>
+</div>
+
+<div>
+
+	<table class="table text-light">
+
+		<tbody id="blank" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+
+		<tbody id="black_river" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+		<tr>
+			<td>Landrover Defender 110</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>White Western Star</td>
+		</tr>
+		</tbody>
+
+		<tbody id="sv_dam" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+		<tr>
+			<td>Scout 800</td>
+			<td>GMC MH9500</td>
+			<td></td>
+			<td>Chevrolet C70 Kodiak</td>
+			<td>Fleetstar 2070A</td>
+		</tr>
+		</tbody>
+
+		<tbody id="island_lake" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+		<tr>
+			<td>Chevrolet C/K 1500</td>
+			<td></td>
+			<td>Western TwinSteer</td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+
+		<tbody id="north_port" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+			<td></td>
+			<td>International Transtar</td>
+			<td>Caterpiller 745C</td>
+			<td>Chevrolet C70 Kodiak</td>
+			<td>Royal BM17</td>
+		</tr>
+		</tbody>
+
+		<tbody id="mt_river" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+		<tr>
+			<td>Hummer H2</td>
+			<td></td>
+			<td>Navistar 5000-MV</td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+
+		<tbody id="white_valley" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+		<tr>
+			<td>Jeep Wrangler</td>
+			<td></td>
+			<td>Derry Longhorn</td>
+			<td>GMC 8000</td>
+			<td>Royal RM17</td>
+		</tr>
+		</tbody>
+
+		<tbody id="pedro_bay" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+
+		<tbody id="drowned_lands" class="tab-content">
+		<tr>
+			<th>Scout</th>
+			<th>Highway</th>
+			<th>Heavy</th>
+			<th>Heavy Duty</th>
+			<th>Offroad</th>
+		</tr>
+			<td>KHAN Marshall</td>
+			<td>Highway Truck</td>
+			<td></td>
+			<td>Tayga</td>
+			<td>Step 33-64 Crocodile</td>
+		</tr>
+		</tbody>
+	
+	</table>
+
+</div>
+
+</div>
+</body>

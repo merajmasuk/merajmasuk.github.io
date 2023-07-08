@@ -13,7 +13,7 @@ function openTab(evt, tabName) {
   }
 
   // Show the selected tab content
-  document.getElementById(tabName).style.display = "block";
+  document.getElementById(tabName).style.display = "table-row";
   // document.getElementById("table-header").style.display = "table-row";
 
   // Add 'active' class to the clicked tab
@@ -21,5 +21,5 @@ function openTab(evt, tabName) {
 }
 
 // Show the first tab by default
-document.getElementById("tab1").style.display = "block";
+document.getElementById("tab1").style.display = "table-row";
 

@@ -1,76 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-/* Hide all tab content by default */
-.tab-content {
-  display: none;
-}
-
-/* Style the tabs */
-.tab {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 5px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-}
-
-/* Style the active tab */
-.active {
-  border: 1px solid #000;
-}
-
-</style>
+  <title>Chat OpenAI Replica</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
-<!-- Tab buttons -->
-<div class="tab" onclick="openTab(event, 'tab1')">Tab 1</div>
-<div class="tab" onclick="openTab(event, 'tab2')">Tab 2</div>
-<div class="tab" onclick="openTab(event, 'tab3')">Tab 3</div>
-
-<!-- Tab content -->
-<div id="tab1" class="tab-content">
-  <h3>Tab 1 Content</h3>
-  <p>This is the content of tab 1.</p>
-</div>
-
-<div id="tab2" class="tab-content">
-  <h3>Tab 2 Content</h3>
-  <p>This is the content of tab 2.</p>
-</div>
-
-<div id="tab3" class="tab-content">
-  <h3>Tab 3 Content</h3>
-  <p>This is the content of tab 3.</p>
-</div>
-
-<script>
-// Function to switch tabs
-function openTab(evt, tabName) {
-  // Hide all tab content
-  var tabContent = document.getElementsByClassName("tab-content");
-  for (var i = 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = "none";
-  }
-
-  // Remove 'active' class from all tabs
-  var tabs = document.getElementsByClassName("tab");
-  for (var i = 0; i < tabs.length; i++) {
-    tabs[i].className = tabs[i].className.replace(" active", "");
-  }
-
-  // Show the selected tab content
-  document.getElementById(tabName).style.display = "block";
-
-  // Add 'active' class to the clicked tab
-  evt.currentTarget.className += " active";
-}
-
-// Show the first tab by default
-document.getElementById("tab1").style.display = "block";
-</script>
-
+  <div id="sidebar">
+    <div id="sidebar-header">
+      <h1>Chat OpenAI</h1>
+    </div>
+    <div id="sidebar-menu">
+      <ul>
+        <li class="active"><a href="#">Inbox</a></li>
+        <li><a href="#">Sent</a></li>
+        <li><a href="#">Drafts</a></li>
+        <li><a href="#">Archived</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="content">
+    <h2>Welcome to Chat OpenAI!</h2>
+    <p>This is a replica of the Chat OpenAI website sidebar.</p>
+  </div>
 </body>
 </html>

@@ -45,6 +45,11 @@ nav li a:hover {
 .tab-content {
 	display: none;
 }
+
+.tab-button {
+	display: none;
+}
+
 .tab {
   display: inline-block;
   margin-right: 10px;
