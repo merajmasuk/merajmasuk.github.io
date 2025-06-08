@@ -1,0 +1,49 @@
+name: Deploy Quartz Site
+
+on:
+  push:
+    branches:
+      - main  # or 'master' or your default branch
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout your notes
+        uses: actions/checkout@v3
+
+      - name: Clone Quartz
+        run: git clone --depth 1 https://github.com/jackyzha0/quartz quartz-site
+
+      - name: Copy your notes into Quartz content
+        run: |
+          rm -rf quartz-site/content/*
+          cp -r ./*.md quartz-site/content/
+          cp -r notes/*.md quartz-site/content/ || true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies & build Quartz
+        run: |
+          cd quartz-site
+          npm install
+          npm run build
+  
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./quartz-site/public
